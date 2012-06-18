@@ -1,0 +1,246 @@
+/* CSS Document */
+
+/*首页推荐*/
+.recommend_main{
+	width:750px;
+	height:450px;
+	margin-top:5px;
+	margin-left:100px;
+	border:0px solid  #3300FF;
+	float:left
+}
+/*推荐左边框*/
+.recommend_left{
+	width:750px;
+	height:150px;
+	float:left;
+	margin-top:20px;
+	margin-left:0px;
+	border:0px solid  #33FF66;
+}
+
+/*产品图片*/
+.recommend_produ_img{
+	width:94px;
+	height:124px;
+	margin-top:15px;
+	float:left;
+	margin-left:25px;
+	border:0px  solid #999999;
+}
+/*产品信息*/
+.recommend_produ_info{
+	font-size:12px;
+	line-height:150% !important;
+	width:600px;
+	height:150px;
+	float:right;
+	margin-right:0px;
+	border:0px solid #FF0000;
+}.recommend_produ_info_hang{
+	margin-top:-30px;
+	margin-left:200px;	
+}.recommend_produ_info_lie{
+	width:600px;	
+	height:34px;
+}
+/*边框文字*/
+.recommend_produ_edge{
+	position:relative;
+	width:750px;
+	height:40px;
+	float:left;
+	margin-left:0px;
+	margin-top:0px;
+	border:0px solid  #66FF00;
+}.recommend_produ_edge_toll{
+	position:absolute;
+	margin-top:5px;
+	margin-left:25px;
+	}.recommend_produ_edge_toll1{
+	position:absolute;
+	margin-top:5px;
+	margin-left:40px;	
+}.recommend_produ_edge_tol2{
+	position:absolute;
+	margin-left:100px;
+	margin-top:5px;
+}.recommend_produ_edge_tol3{
+	position:absolute;
+	margin-top:5px;
+	margin-left:115px;
+}.recommend_produ_edge_tol4{
+	position:absolute;
+	margin-top:5px;
+	margin-left:180px;
+}.recommend_produ_edge_tol5{
+	position:absolute;
+	margin-left:200px;
+	margin-top:5px;
+}.recommend_produ_edge_tol6{
+	position:absolute;
+	margin-left:260px;
+	margin-top:4px;
+}.recommend_produ_edge_tol7{
+	position:absolute;
+	margin-top:5px;
+	margin-left:280px;
+}.recommend_produ_edge_tol8{
+		width:40px;
+		height:20px;
+		font-size:14px;
+		color:#019858;
+		background:#D2E9FF;
+		margin-left:639px;
+		margin-top:0px;
+		text-align:center;	
+}
+/*推荐内容*/
+.recomend_content {
+	width:750px;
+	height:210px;
+	margin-top:195px;
+	border:0px solid #FF00FF;
+}.introduction{
+		margin-top:20px;
+		margin-left:20px;
+		font-size:13px;
+		color:#006600 ;
+	}.introduction_content{
+		TEXT-INDENT:2em;
+		margin-top:10px;
+		margin-left:20px;
+		line-height:15pt;
+		font-size:11px;
+	}
+/*同类产品*/
+.like_product{
+	width:750px;
+	height:320px;
+	float:left;
+	margin-left:100px;
+	margin-top:5px;
+	border:0px solid #999999;
+}.like_product_title{
+	margin-top:10px;
+	margin-left:20px;
+	color:#006600 ;	
+	font-size:13px;
+}.piclist{
+	margin-top:10px;
+	padding:0;
+	list-style-type:none;
+	width:100%;
+	}.piclist li{
+		float:left;
+		width:105px;
+		height:140px;
+	}.piclist img{
+		display:block;
+		margin:0 auto;
+		width:60px;
+		height:95px;
+		border:0px 
+		solid #ccc;
+		}.piclist p{
+		text-align:center;
+		}
+/*评论*/
+.user_message{
+	width:750px;
+	height:600px;
+	float:left;
+	margin-left:100px;
+	margin-top:5px;
+	border:0px solid #999999;
+}.user_message_title{
+	font-size:13px;
+	margin-top:10px;
+	margin-left:20px;
+	color:#006600 ;		
+}.user_message_image{
+	margin-top:20px;
+	margin-left:20px;	
+}.user_message_ss{
+		margin-left:80px;
+		 margin-top:-50px;
+		 width:630px;
+		 height:25px;	
+		 background:#C4E1FF;
+}.user_message__context{
+		position: absolute;
+		margin-top:8px;
+		margin-left:5px;
+		font-size:14px;
+		color:#0066CC;	
+}.user_message_name{
+		position: absolute;
+		margin-top:15px;
+		margin-left:80px;
+		color:#0066CC;	
+}.user_message_context{
+
+		margin-top:40px;
+		margin-left:80px;
+		font-size:11px;	
+		width:620px;
+		TEXT-INDENT:2em;
+}
+ /*右侧栏*/
+.rightcolumn{
+	width:215px;
+	height:600px;
+	float:right;
+	margin-top:5px;
+	margin-right:100px;
+	padding-top:0px;
+	border:0px solid  #999999;
+
+}
+/*热门标签*/
+.hot_tags{
+	width:215px;
+	height:200px;
+	float:left;
+	border:0px solid #999999;
+}.hot_tags_title{
+	margin-top:20px;
+	margin-left:0px;
+	font-size:13px;
+	color:#006600 ;
+}.table_type{
+	margin-top:20px;
+}.tables_about{
+	margin-top:10px;
+	padding:0;
+	list-style-type:none;
+	width:100%;
+	font-size:12px;
+}.tables_about li{
+		float:left;
+		width:50px;
+		height:20px;
+}.tables_about p{
+		text-align:center;
+}.hot_tags img{
+	margin-top:10px;
+}
+/*页脚*/
+.footer{
+	width:1000px;
+	height:200px;
+	margin-top:20px;
+	float:left;
+	margin-left:100px;
+	border:1px  solid #999999;
+}
+/*登录 注册*/
+.login{
+		position: absolute;
+		margin-top:-50px;
+		margin-left:1000px;
+}.zhuce{
+		position: absolute;
+		margin-top:-50px;
+		margin-left:1050px;
+}

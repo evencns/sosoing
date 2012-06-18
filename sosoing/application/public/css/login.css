@@ -1,0 +1,65 @@
+/*µÇÂ¼ ×¢²á*/
+/*µÇÂ¼*×¢²á°´Å¥*/
+.login{
+	position: absolute;
+	margin-top:30px;
+	margin-left:800px;
+	z-index:1;
+	width:300px;
+}.loginList{
+	margin-bottom:5px;
+}.loginButton{
+	 width:50px;
+	 padding:1px 10px;
+   font-size:12px;
+   border:1px #1E7ACE solid;
+   background:#D0F0FF;
+
+}
+
+/*ËÑË÷¿ò*/
+.shoushou{
+  	position:absolute;
+  	font-size:13px;
+  	font-weight:bold;
+  	margin-top:105px;
+  	margin-left:800px;
+  	z-index:1;
+  }.searchinput{
+  	height:25px;
+		border-right-width: 0px;
+		padding-left: 3px;
+		width: 168px;
+		font-family: arial;
+		float: left;
+		border-top-width: 0px;
+		border-bottom-width: 0px;
+		color: #636365;
+	margin-left: 0px;
+	border-right-width: 0px;
+	padding-left: 3px;
+	width: 175px;
+	font-family: arial;
+	float: left;
+	border-top-width: 0px;
+	border-bottom-width: 0px;
+	color: #636365;
+	margin-left: 4px;
+	font-size: 8pt;
+	vertical-align: middle;
+	border-left-width: 0px;
+	margin-right: 3px;
+}
+.tab_search{
+	border-bottom: #cccccc 1px solid;
+	border-left: #cccccc 1px solid;
+	height: 25px;
+	border-top: #cccccc 1px solid;
+	border-right: #cccccc 1px solid;
+	margin-left:35px;
+}
+.searchaction{
+	width: 21px;
+	float: left;
+	height: 17px;
+}

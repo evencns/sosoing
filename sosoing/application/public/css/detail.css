@@ -1,0 +1,196 @@
+.leftcolumn{
+		width:200px;
+		height:800px;
+		margin-top:5px;
+		float:left;
+		margin-left:72px;
+		border:1px solid #FFF;
+	}.fist-context{
+		margin-bottom:5px;
+		margin-left:10px;
+	}.box_context{
+		margin-bottom:5px;
+		margin-left:5px;
+		font-size:12px;
+		margin-top:15px;
+	}.img_context{
+		border:1px;
+		width:90px;
+		height:90px;
+	}.img_font{
+		margin-left:200px;
+		margin-top:-80px;
+	}.font_context{
+		width:500px;
+		height:20px;
+		margin-bottom:4.5px;
+		margin-left:0px;
+	}.evaluate{
+		 margin-top:-250px;
+		 margin-left:500px;
+		 width:180px;
+		 height:240px;
+		 background:#6cf;
+	}.online{
+		 margin-top:20px;
+		 width:500px;
+		 height:5px;
+	}.pen{
+		margin-top:0px;	
+	}.recommend{
+		width:40px;
+		height:20px;
+		font-size:14px;
+		color:#019858;
+		background:#D2E9FF;
+		margin-left:639px;
+		margin-top:-8px;
+		text-align:center;
+	}.introduction{
+		margin-top:30px;
+		font-size:15px;
+		color:#006600 ;
+	}.introductionContext{
+		  width:700px;
+		  margin-top:30px;
+		  line-height:20px;
+	}.book_evaluate{
+		margin-top:30px;
+		width:700px;
+		
+	}.tourist_evaluate{
+		margin-top:30px;
+		font-size:15px;
+		color:#006600 ;
+	}.tourist_Image{
+		margin-top:30px;	
+	}.tourist_title{
+		margin-left:60px;
+		margin-top:-50px;
+		 width:630px;
+		 height:25px;	
+		 background:#C4E1FF;	
+	}.tourist_title_context{
+		position: absolute;
+		margin-top:10px;
+		margin-left:5px;
+		font-size:14px;
+		color:#0066CC;
+	}.tourist_name{
+		margin-top:10px;
+		margin-left:66px;
+	}.tourist_context{
+		margin-top:30px;
+		margin-left:66px;
+		font-size:12px;	
+		width:620px;
+	}.rightcolumn{
+		width:300px;
+		height:900px;
+		float:right;
+		margin-top:15px;
+		margin-right:90px;
+	}.author_recommend{
+		margin-top:15px;
+		color:#006600 ;
+		font-size:14px;
+	}.author_product{
+ 		width:150xp;
+ 		height:120px;
+ 		margin-top:10px;
+ 		height:20px;
+  }.author_bookimage{
+  		margin-top:10px;
+  }.author_bookName{
+  	font-size:12px;
+  	color:#0066CC;
+  	margin-top:5px;
+  }.everyOneLookBook{
+  	margin-top:300px;
+		color:#006600 ;
+		font-size:14px;
+  }.weiboguanzhu{
+  	position:absolute;
+  	width:300px;
+  	height:50px;
+  	margin-top:-40px;
+  	margin-left:250px;
+  }.login{
+  	width:500px;
+  	height:50px;
+  	position:absolute;
+  	font-size:12px;
+  	margin-top:-90px;
+  }.registration{
+  	width:50px;
+  	position:absolute;
+  	font-size:13px;
+  	font-weight:bold;
+  	margin-top:0px;
+  	margin-left:700px;
+  }.loginone{
+  	width:50px;
+  	position:absolute;
+  	font-size:13px;
+  	font-weight:bold;
+  	margin-top:0px;
+  	margin-left:750px;
+  }.sianlogin{
+  	width:80px;
+  	position:absolute;
+  	font-size:13px;
+  	font-weight:bold;
+  	margin-top:0px;
+  	margin-left:800px;
+  }.qqlogin{
+  	width:80px;
+  	position:absolute;
+  	font-size:13px;
+  	font-weight:bold;
+  	margin-top:0px;
+  	margin-left:880px;
+  }.taobaologin{
+  	width:80px;
+  	position:absolute;
+  	font-size:13px;
+  	font-weight:bold;
+  	margin-top:0px;
+  	margin-left:950px;
+  }.shoushou{
+  	position:absolute;
+  	font-size:13px;
+  	font-weight:bold;
+  	margin-top:20px;
+  	margin-left:800px;
+  }.searchinput{
+	border-right-width: 0px;
+	padding-left: 3px;
+	width: 168px;
+	font-family: arial;
+	float: left;
+	border-top-width: 0px;
+	border-bottom-width: 0px;
+	color: #636365;
+	margin-left: 4px;
+	font-size: 8pt;
+	vertical-align: middle;
+	border-left-width: 0px;
+	margin-right: 3px;
+}
+.tab_search{
+	border-bottom: #cccccc 1px solid;
+	border-left: #cccccc 1px solid;
+	height: 25px;
+	border-top: #cccccc 1px solid;
+	border-right: #cccccc 1px solid;
+
+}
+.searchaction{
+	width: 21px;
+	float: left;
+	height: 17px;
+}
+  
+  
+  
+  
