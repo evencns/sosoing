@@ -31,20 +31,6 @@ class UserModel  extends CI_Model
 		return $user;
     }
 
-    /**
-     * 根据用户名获取用户
-     *
-     * @param   string  $username   用户名
-     * @return  array
-     */
-    public function getUserByUsername($username)
-    {
-        assert('$username');
-
-        $sql = 'SELECT * FROM sosoing_users WHERE username = ?';
-
-        return $this->getRow($sql, array($username));
-    }
 
     function  user_check($username){
 	
@@ -67,7 +53,6 @@ class UserModel  extends CI_Model
 		//echo '<pre>';print_r(get_class_methods($this->db));exit;
        
     }
-
 
 
 }

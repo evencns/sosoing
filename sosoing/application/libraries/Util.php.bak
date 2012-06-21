@@ -15,7 +15,7 @@ class Util
         if (preg_match($rule, $username)) {
 			if (strlen($username) < 6) {
 				return 1;
-			} elseif (strlen($username) > 16) {echo 1;exit;
+			} elseif (strlen($username) > 16) {
 				return 2;
 			} else {
 				return true;
@@ -38,6 +38,17 @@ class Util
         return (bool) preg_match($rule, $email);
     }
 
+
+	public  static  function isImg($chkpic){
+	
+		echo $chkpic; echo $_SESSION['check_pic'];
+			if(!strcasecmp($chkpic,$_SESSION['check_pic'])){
+				return true;
+			}else{
+				return false;
+			}
+		
+	}
 }
 
 

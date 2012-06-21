@@ -1,5 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+session_start();
 /**
  * 用户控制器
  *
@@ -43,80 +44,8 @@ class User extends My_Controller
        //$this->tpl->display('login.html');
 		$this->load->view('login.html');
     }
+    
 
-    /**
-     * 用户登录
-     *
-     */
-    public function doLogin()
-	{
-        $username = $_REQUEST['username'];
-        $password = $_REQUEST['password'];
-        if (!$username || !$password) {
-            exit;
-        }
-
-        $this->load->model('UserModel');
-		
-        $userInfo = $this->_params->UserModel->getUserByLoginInfo($username, md5($password));
-		if ($userInfo) {
-			
-			$this->load->view('sosohome.html');
-		} else {
-			
-			echo "用户名或密码错误,请重新登录";
-			
-		}
-		//echo  $userInfo;exit;
-        if ($this->isAjax())
-        {
-            if ($userInfo)
-            {
-                // 存储登录状态
-                $_SESSION['uid'] = $userInfo['uid'];
-                $_SESSION['username'] = $userInfo['username'];
-
-                $info = array('status' => 0, 'data' => $userInfo);
-            }
-            else
-            {
-                $info = array('status' => 1, 'msg' => '用户名或密码不正确！');
-            }
-            $this->makeJsonPrint($info);
-        }
-        else
-        {
-            if ($userInfo)
-            {
-                // 存储登录状态
-                $_SESSION['uid'] = $userInfo['uid'];
-                $_SESSION['username'] = $userInfo['username'];
-//                $this->showMsg();
-            }
-            else
-            {
-//                $this->showMsg();
-            }
-        }
-    }
-
-    /**
-     * 用户退出
-     *
-     */
-    public function logout()
-    {
-        foreach ($_SESSION as $key => $val) {
-            unset($_SESSION[$key]);
-        }
-
-        // 设置cookie过期
-        /**
-            ...
-        */
-
-        $this->makeJsonPrint(array('status' => 0));
-    }
 
     /**
      * 显示用户注册页面
@@ -135,8 +64,7 @@ class User extends My_Controller
 	*/
 
 	public  function register(){
-	    
-		if(empty($_POST['submit'])){         
+		if(!isset($_POST['submit_x'])){         
 		echo "非法访问";
 		echo "<script>location.href=register.html</script>";
 		exit;
@@ -144,8 +72,10 @@ class User extends My_Controller
 		
 		$username = $_POST['username'];
 		$password = $_POST['password'];
-		$email    = $_POST['email'];		
+		$email    = $_POST['email'];
+		$chkpic   = $_POST['img'];
 		
+				
 		//注册判断信息
 		
 		$this->load->library('Util');
@@ -172,6 +102,10 @@ class User extends My_Controller
 			exit('错误：电子邮箱格式错误。<a href="javascript:history.back(-1);">返回</a>');
 		}
 		
+		if(!Util::isImg($chkpic)){
+			exit ('验证码不正确。<a href="javascript:history.back(-1);">返回</a>');
+		}
+			
 		$regdate = date("Y-m-d H:i:s");
 		$data =  array(
 			'username'=>"$username",	
@@ -196,16 +130,6 @@ class User extends My_Controller
 			
         }
 	  }
-    /**
-     * 检测是否已经存在了相同用户名的用户
-     *
-     */
-    private function _checkUserExistsByUsername($username)
-    {
-        $userModel = new UserModel;
-
-        return (bool) $userModel->getUserByUsername($username);
-    }
 	
 	
 	/*
@@ -219,12 +143,12 @@ class User extends My_Controller
 		for ($i=0;$i<4;$i++){
 	
 		$rand.=dechex(rand(1,15));
-	
 		}
+		$_SESSION['check_pic']=$rand;
 		$im = imagecreate(60,20);
 		//设置颜色
-		$bg = imagecolorallocate($im, 255, 255, 255);
-		$te = imagecolorallocate($im, 0, 0, 0);
+		$bg  = imagecolorallocate($im, 255, 255, 255);
+		$te  = imagecolorallocate($im, 0, 0, 0);
 		$te1 = imagecolorallocate($im, 100, 100, 100);
 		//写入图片
 		imagestring($im, rand(3,6), rand(1,20), rand(1,8), $rand, $te);
@@ -236,5 +160,4 @@ class User extends My_Controller
 		header ("Content-type: image/jpeg");
 		imagejpeg($im);
 		} 
-
 	}

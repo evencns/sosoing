@@ -1,5 +1,7 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); 
 
+session_start();
+
 class  Login extends CI_Controller {
 
 	function  index(){
@@ -9,41 +11,51 @@ class  Login extends CI_Controller {
 
 	function dologin(){
 		$this->load->model("UserModel");
-		$uname=$_POST['username'];
+		$uname= $_POST['username'];
 		$user = $this->UserModel->user_check($uname);
 		
-		if($user){
-						
+		if($user){			
 			$pwd = md5($_POST['password']);
-
+			//$checkpic = $_POST['checkpic'];
+			
 			if($user[0]->password == $pwd){
 				$this->load->library('session');
-				$uid= array('uid'=>$user[0]->uid);
+				$uid= array('uid'=>$user[0]->uid, 'username' => $uname);
 				$this->session->set_userdata($uid);
-				//echo "ÄúµÄID:". $this->session->userdata('uid');
+				//echo "æ‚¨çš„ID:". $this->session->userdata('uid');
 				if($this->session->userdata('uid')){
-						echo  $uname,'»¶Ó­Äú£¡½øÈë<a href="home">ÓÃ»§ÖĞĞÄ</a> </br>';
-						echo  '<a href="login/loginout">°²È«ÍË³ö</a>';
+					exit(json_encode(array(
+						'status'   => 0,
+						'data'	   => array(
+						'username' => $uname	
+						)
+					)));
+						//echo  $uname,'æ¬¢è¿æ‚¨ï¼è¿›å…¥<a href="home">ç”¨æˆ·ä¸­å¿ƒ</a> </br>';
+						//echo  '<a href="login/loginout">å®‰å…¨é€€å‡º</a>';
 				}else{
 					
-						echo "ÇëÖØĞÂµÇÂ¼";
+						echo "è¯·é‡æ–°ç™»å½•";
 					}
 				}else{
 			
-						echo "ÃÜÂëÊäÈë´íÎó";
+						//echo "å¯†ç è¾“å…¥é”™è¯¯";
+						alert('å¯†ç è¾“å…¥é”™è¯¯');
 				}
 			
 		}else {
 		
-			echo "ÄúÃ²ËÆÃ»ÓĞÔÚ±¾Õ¾×¢²á";
+			echo "æ‚¨è²Œä¼¼æ²¡æœ‰åœ¨æœ¬ç«™æ³¨å†Œ";
 		}
 	
 	}
 
-	 function  loginout(){
+	 function  logout(){
 
 		$this->load->library('session');
 		$this->session->unset_userdata('uid');
+		$this->session->unset_userdata('username');
+
+		exit(json_encode(array('status' => 0)));
    }
 
 	function home(){

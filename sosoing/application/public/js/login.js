@@ -127,7 +127,7 @@ document.body.removeChild(msgObj);
 var msgBox = table.insertRow(-1).insertCell(-1); 
 msgBox.style.cssText = "font:10pt '宋体';"; 
 msgBox.colSpan = 2; 
-var loginname = '<form name="Regform" action="index.php/User/register"  method="post" onsubmit="return InputCheck(this)" >' +
+var loginname = '<form name="Regform"   method="post" onsubmit="return InputCheck(this)" >' +
 		"  <div style='position:absolute;margin-top:8px;margin-left:30px;font-size:12px;'>" +
 		"<font color=red>*</font>账号:</div><div style='margin-top:5px;margin-left:120px;font-size:12px;'>" +
 		"<input type = 'text' name='username' style='width:120px;height:15px;font-size:12px;'/>" +
@@ -150,7 +150,7 @@ var character = "<div style = 'margin-top:20px;margin-left:-90px;font-size:12px;
 		"<div style='margin-top:-18px;font-size:12px;'>" +
 		"<input type='text' name='img' style='width:50px;height:15px;font-size:12px;' /></div>" +
 		"<div style='margin-top:-25px;margin-left:80px;'>" +
-		"<img id='verify' src='index.php/User/checkpic' style='width:65px;height:30px;'/>&nbsp;&nbsp;&nbsp;看不清？" +
+		"<img id='verify'   src='index.php/User/checkpic'  style='width:65px;height:30px;'/>&nbsp;&nbsp;&nbsp;看不清？" +
 		"<a href='#' onclick='showVerify()' style='text-decoration:none'>换一张</a>" +
 		"</div>";
 var xiyi = "<div style='margin-top:20px;margin-left:-40px;'>" +
@@ -234,6 +234,7 @@ function addSubmitEvent()
         {
             var username = this["username"].value;
             var password = this["password"].value;
+			//var checkpic = this["checkpic"].value;
             if (!username) {
                 alert("用户名不能为空！");
                 this["username"].focus();
@@ -245,17 +246,17 @@ function addSubmitEvent()
                 return false;
             }
 
-            $.get("/index.php/user/doLogin", {"username": username, "password": password}, function(json) {
+            $.post("index.php/login/dologin", {"username": username, "password": password}, function(json) {
                 var data = json.jsonToArray();
                 if (data.status) {
                     alert(data.msg);
                 } else {
-                    var html  = "尊敬的用户";
-                        html += "<b style='color: red; cursor: pointer' onclick='gotoHome()'>";
+                    var html  = "尊敬的用户:";
+                        html += "<b style='color: orange; cursor: pointer' onclick='gotoHome()'>";
                         html += data.data.username;
                         html += "</b>";
                         html += Util.getHours();
-                        html += "好|";
+                        html += "好!|";
                         html += "<b style='cursor: pointer' onclick='logout()'>退出</b>";
 
                     $("#login_div").html(html);
@@ -276,7 +277,7 @@ function logout()
     /** 重新获取jquery对象 */
     var $ = jQuery.noConflict();
 
-    $.get("/index.php/user/logout", null, function(json) {
+    $.get("index.php/login/logout", null, function(json) {
         var data = json.jsonToArray();
         if (data.status) {
             alert(data.msg);

@@ -31,26 +31,13 @@ class UserModel  extends CI_Model
 		return $user;
     }
 
-    /**
-     * 根据用户名获取用户
-     *
-     * @param   string  $username   用户名
-     * @return  array
-     */
-    public function getUserByUsername($username)
-    {
-        assert('$username');
-
-        $sql = 'SELECT * FROM sosoing_users WHERE username = ?';
-
-        return $this->getRow($sql, array($username));
-    }
 
     function  user_check($username){
 	
 		$this->db->where('username',$username);
 		$this->db->select('*');
-		
+		$query=$this->db->get('sosoing_users');
+		return $query->result();
 	}
 
     /**

@@ -25,7 +25,11 @@ class My_Controller extends CI_Controller
         // 初始化模板引擎
         $this->initTpl();
 
-        $this->tpl->assign('user', isset($_SESSION['user']) && $_SESSION['user'] ? $_SESSION['user'] : null);
+		$this->load->library('session');
+		$uid = $this->_params->session->userdata('uid');
+		$username = $this->_params->session->userdata('username');
+		//echo '<pre>';print_r(array('uid' => $uid, 'username' => $username));exit;
+        $this->tpl->assign('user', array('uid' => $uid, 'username' => $username));
     }
 
     public function initTpl()

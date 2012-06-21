@@ -38,6 +38,19 @@ class Util
         return (bool) preg_match($rule, $email);
     }
 
+
+	public  static  function isImg($chkpic){
+	
+		if(!strcasecmp($chkpic,$_SESSION['check_pic'])){
+
+				return true;
+	
+			}else{
+			
+				return false;
+			}
+		
+	}
 }
 
 

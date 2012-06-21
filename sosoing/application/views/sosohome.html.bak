@@ -18,17 +18,17 @@
         </a>
     </div>
         <div class="login" id="login_div">
-            <!--{if !$user.username} -->
-                <form id="login_form"  method="post" action="dsds"  />
+            {if !$user.username}
+                <form id="login_form"  method="post" action="index.php/login/dologin"  />
                 <div class="loginList">账号 &nbsp;<input type="text" name="username" >&nbsp;&nbsp;
 				<input type="checkbox"/>&nbsp;&nbsp;自动登录</div>
                 <div class="loginList">密码 &nbsp;<input type="password" name="password" >&nbsp;&nbsp;
-				<input id ="login" class="loginButton" type="submit"  name="submit" value="登录" />&nbsp;&nbsp;<a href="#" style="text-decoration:none" onclick="alertWin('注册',550,310);" onfocus="this.blur()">注册</a></div>
+				<input id ="login" class="loginButton" type="submit" value="登录" />&nbsp;&nbsp;<a href="#" style="text-decoration:none" onclick="alertWin('注册',550,310);" onfocus="this.blur()">注册</a></div>
                 </form>
-            <!--{else}-->
+            {else}
                 <script>
                     var html  = "尊敬的用户";
-                        html += "<b style='color: red; cursor: pointer' onclick='gotoHome()'>";
+                        html += "<b style='color: orange; cursor: pointer' onclick='gotoHome()'>";
                         html += "{$user.username}";
                         html += "</b>";
                         html += Util.getHours();
@@ -36,7 +36,7 @@
                         html += "<b style='cursor: pointer' onclick='logout()'>退出</b>";
                     $("#login_div").html(html);
                 </script>
-            <!--{/if}-->
+            {/if}
         </div>
         <div class="shoushou">
             <form action="#" name="search">

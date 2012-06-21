@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.7, created on 2012-06-15 09:53:28
+<?php /* Smarty version Smarty-3.1.7, created on 2012-06-20 10:29:29
          compiled from "application/views\sosohome.html" */ ?>
 <?php /*%%SmartyHeaderCode:283894fda9132aa42b1-86314899%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ca29f8bcf0b4a996c7d2ccd40975911002e1fb38' => 
     array (
       0 => 'application/views\\sosohome.html',
-      1 => 1339746765,
+      1 => 1340180968,
       2 => 'file',
     ),
   ),
@@ -54,26 +54,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         </a>
     </div>
         <div class="login" id="login_div">
-            <!--<?php if (!$_smarty_tpl->tpl_vars['user']->value['username']){?> -->
-                <form id="login_form"  method="post" action="dsds"  />
+            <?php if (!$_smarty_tpl->tpl_vars['user']->value['username']){?>
+                <form id="login_form"  method="post" action="index.php/login/dologin"  />
                 <div class="loginList">账号 &nbsp;<input type="text" name="username" >&nbsp;&nbsp;
 				<input type="checkbox"/>&nbsp;&nbsp;自动登录</div>
                 <div class="loginList">密码 &nbsp;<input type="password" name="password" >&nbsp;&nbsp;
-				<input id ="login" class="loginButton" type="submit"  name="submit" value="登录" />&nbsp;&nbsp;<a href="#" style="text-decoration:none" onclick="alertWin('注册',550,310);" onfocus="this.blur()">注册</a></div>
+				<input id ="login" class="loginButton" type="submit" value="登录" />&nbsp;&nbsp;<a href="#" style="text-decoration:none" onclick="alertWin('注册',550,310);" onfocus="this.blur()">注册</a></div>
                 </form>
-            <!--<?php }else{ ?>-->
+            <?php }else{ ?>
                 <script>
                     var html  = "尊敬的用户";
-                        html += "<b style='color: red; cursor: pointer' onclick='gotoHome()'>";
+                        html += "<b style='color: orange; cursor: pointer' onclick='gotoHome()'>";
                         html += "<?php echo $_smarty_tpl->tpl_vars['user']->value['username'];?>
 ";
                         html += "</b>";
                         html += Util.getHours();
-                        html += "好|";
+                        html += "好！|";
                         html += "<b style='cursor: pointer' onclick='logout()'>退出</b>";
                     $("#login_div").html(html);
                 </script>
-            <!--<?php }?>-->
+            <?php }?>
         </div>
         <div class="shoushou">
             <form action="#" name="search">
