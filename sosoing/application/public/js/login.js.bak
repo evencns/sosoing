@@ -127,7 +127,7 @@ document.body.removeChild(msgObj);
 var msgBox = table.insertRow(-1).insertCell(-1); 
 msgBox.style.cssText = "font:10pt '宋体';"; 
 msgBox.colSpan = 2; 
-var loginname = '<form name="Regform"   method="post" onsubmit="return InputCheck(this)" >' +
+var loginname = '<form name="Regform"  action="index.php/user/register" method="post" onsubmit="return InputCheck(this)" >' +
 		"  <div style='position:absolute;margin-top:8px;margin-left:30px;font-size:12px;'>" +
 		"<font color=red>*</font>账号:</div><div style='margin-top:5px;margin-left:120px;font-size:12px;'>" +
 		"<input type = 'text' name='username' style='width:120px;height:15px;font-size:12px;'/>" +
@@ -246,12 +246,12 @@ function addSubmitEvent()
                 return false;
             }
 
-            $.post("index.php/login/dologin", {"username": username, "password": password}, function(json) {
+            $.post("index.php/user/register", {"username": username, "password": password}, function(json) {
                 var data = json.jsonToArray();
                 if (data.status) {
                     alert(data.msg);
                 } else {
-                    var html  = "尊敬的:";
+                    var html  = "尊敬的用户:";
                         html += "<b style='color: orange; cursor: pointer' onclick='gotoHome()'>";
                         html += data.data.username;
                         html += "</b>";

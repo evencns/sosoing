@@ -32,7 +32,7 @@
                         html += "{$user.username}";
                         html += "</b>";
                         html += Util.getHours();
-                        html += "好|";
+                        html += "好！|";
                         html += "<b style='cursor: pointer' onclick='logout()'>退出</b>";
                     $("#login_div").html(html);
                 </script>
@@ -68,7 +68,7 @@
             </div>
 
             <div style=" position: absolute;left: 415px;top: 15px;font-size:14px;color: #666666">
-                <a href="/index.php/channel/index" style="text-decoration:none; ">图书</a>
+                <a href="/index.php/channel" style="text-decoration:none; ">图书</a>
             </div>
 
             <div style=" position: absolute;left: 500px;top: 15px;font-size:14px;color: #666666">
@@ -465,7 +465,9 @@
         <script language="JavaScript" src="{$URL_JS}/tab.js"></script>
         </div>
 </div>
-    <div class="footer"> 页脚</div>
+    <div class="footer">
+	  {include file="footer.html"}
+	</div>
 
 </body>
 </html>

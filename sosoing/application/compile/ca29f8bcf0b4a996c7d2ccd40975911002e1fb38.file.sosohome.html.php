@@ -1,42 +1,79 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php /* Smarty version Smarty-3.1.7, created on 2012-06-26 05:32:58
+         compiled from "application/views\sosohome.html" */ ?>
+<?php /*%%SmartyHeaderCode:283894fda9132aa42b1-86314899%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'ca29f8bcf0b4a996c7d2ccd40975911002e1fb38' => 
+    array (
+      0 => 'application/views\\sosohome.html',
+      1 => 1340681549,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '283894fda9132aa42b1-86314899',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.7',
+  'unifunc' => 'content_4fda9133510ef',
+  'variables' => 
+  array (
+    'URL_CSS' => 0,
+    'URL_JS' => 0,
+    'URL_IMAGE' => 0,
+    'user' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_4fda9133510ef')) {function content_4fda9133510ef($_smarty_tpl) {?>﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>搜搜赢首页</title>
-<link rel="stylesheet" type="text/css"  href="{$URL_CSS}/header.css" />
-<link rel="stylesheet" type="text/css"  href="{$URL_CSS}/soso.css"   />
-<link rel="stylesheet" type="text/css" href="{$URL_CSS}/footer.css" />
-<link rel="stylesheet" type="text/css" href="{$URL_CSS}/login.css" />
-<script src="{$URL_JS}/jquery.js"></script>
-<script src="{$URL_JS}/login.js"></script>
+<link rel="stylesheet" type="text/css"  href="<?php echo $_smarty_tpl->tpl_vars['URL_CSS']->value;?>
+/header.css" />
+<link rel="stylesheet" type="text/css"  href="<?php echo $_smarty_tpl->tpl_vars['URL_CSS']->value;?>
+/soso.css"   />
+<link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['URL_CSS']->value;?>
+/footer.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['URL_CSS']->value;?>
+/login.css" />
+<script src="<?php echo $_smarty_tpl->tpl_vars['URL_JS']->value;?>
+/jquery.js"></script>
+<script src="<?php echo $_smarty_tpl->tpl_vars['URL_JS']->value;?>
+/login.js"></script>
 </head>
-<body background="{$URL_IMAGE}/bg.gif" >
+<body background="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/bg.gif" >
 <div class="top">
     <div class="logo">
         <a href="/" alt="搜搜赢", title="搜搜赢">
-            <img width="250px" height="80px" src="{$URL_IMAGE}/logo.gif"> 
+            <img width="250px" height="80px" src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/logo.gif"> 
         </a>
     </div>
         <div class="login" id="login_div">
-            {if !$user.username}
+            <?php if (!$_smarty_tpl->tpl_vars['user']->value['username']){?>
                 <form id="login_form"  method="post" action="index.php/login/dologin"  />
                 <div class="loginList">账号 &nbsp;<input type="text" name="username" >&nbsp;&nbsp;
 				<input type="checkbox"/>&nbsp;&nbsp;自动登录</div>
                 <div class="loginList">密码 &nbsp;<input type="password" name="password" >&nbsp;&nbsp;
 				<input id ="login" class="loginButton" type="submit" value="登录" />&nbsp;&nbsp;<a href="#" style="text-decoration:none" onclick="alertWin('注册',550,310);" onfocus="this.blur()">注册</a></div>
                 </form>
-            {else}
+            <?php }else{ ?>
                 <script>
                     var html  = "尊敬的用户";
                         html += "<b style='color: orange; cursor: pointer' onclick='gotoHome()'>";
-                        html += "{$user.username}";
+                        html += "<?php echo $_smarty_tpl->tpl_vars['user']->value['username'];?>
+";
                         html += "</b>";
                         html += Util.getHours();
                         html += "好！|";
                         html += "<b style='cursor: pointer' onclick='logout()'>退出</b>";
                     $("#login_div").html(html);
                 </script>
-            {/if}
+            <?php }?>
         </div>
         <div class="shoushou">
             <form action="#" name="search">
@@ -46,14 +83,16 @@
                             <input type="text" name="q" title="Search" class="searchinput" id="searchinput" onkeydown="if (event.keyCode==13) {}" onblur="if(this.value=='')value='- 搜索你喜欢的 -';" onfocus="if(this.value=='-搜索你喜欢的 -')value='';" value="- 搜索你喜欢的 -" size="10"/>
                             </td>
                         <td>
-                            <input type="image" width="21" height="17" class="searchaction" onclick="if(document.forms['search'].searchinput.value=='- Search Products -')document.forms['search'].searchinput.value='';" alt="Search" src="{$URL_IMAGE}/magglass.gif" border="0" hspace="2"/>
+                            <input type="image" width="21" height="17" class="searchaction" onclick="if(document.forms['search'].searchinput.value=='- Search Products -')document.forms['search'].searchinput.value='';" alt="Search" src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/magglass.gif" border="0" hspace="2"/>
                         </td>
                     </tr>
                 </table>
             </form>
         </div>
         <div class="navigation">
-            <img  width="1200px" height="40px" src="{$URL_IMAGE}/navigation.gif">
+            <img  width="1200px" height="40px" src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/navigation.gif">
 
             <div style=" position: absolute;left: 120px;top: 15px;font-size:14px; color: #666666">
                 <a href="index.php" style="text-decoration:none;"> 首页</a>
@@ -81,7 +120,8 @@
 <div class="leftcolumn"> 
     <div class="relation-produ" >
         <div class="dianping">
-        <img height="30px" width="200" src="{$URL_IMAGE}/dianping.jpg">
+        <img height="30px" width="200" src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/dianping.jpg">
         <div class="dianping_font">热门推荐</div><div class="how_much">更多...</div>
         </div>
         <div class="relation_produ_img">
@@ -140,15 +180,20 @@
 </div>
  	<div id = "banner" class="banner" >
  		<div id="imageFx">
-		<img src="{$URL_IMAGE}/634661303840580000.jpg" />
-		<img src="{$URL_IMAGE}/banner.jpg" />
-		<img src="{$URL_IMAGE}/60683238.jpg"/>
-		<img src="{$URL_IMAGE}/634656880149173750.jpg" />
-		<img src="{$URL_IMAGE}/634656889592767500.jpg" />
+		<img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/634661303840580000.jpg" />
+		<img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/banner.jpg" />
+		<img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/60683238.jpg"/>
+		<img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/634656880149173750.jpg" />
+		<img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/634656889592767500.jpg" />
     	<div id="maskFx" ></div>
 	</div>
  <div>	
- {literal}
+ 
 	 <script>
 				Tpl={
 					w:640,h:130,
@@ -253,13 +298,14 @@
 					document.getElementById('imageFx'),
 					document.getElementById('maskFx')
 				);
-	</script>{/literal}
+	</script>
  </div>
  	</div>
 
 <div  class="rightcolumn">
  	<div class="notice" >
-		<div class="dianping"><img src="{$URL_IMAGE}/dianping.jpg" width="200" height="30px"  /></div>
+		<div class="dianping"><img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/dianping.jpg" width="200" height="30px"  /></div>
 		<div class="dianping_font">网站公告</div><div class="how_much">更多...</div>
 		<div class="dianping_context">
 			<ul style="list-style-type=none">
@@ -273,7 +319,8 @@
 	</div>
 	<div class="recommend-top">
 	<div class="dianping">
-			<img src="{$URL_IMAGE}/dianping.jpg" width="200" height="30px"  />
+			<img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/dianping.jpg" width="200" height="30px"  />
 		</div>
 		<div class="dianping_font">
 			相关产品
@@ -282,7 +329,8 @@
 			更多...
 		</div>
 		<div class="recommend-top-img">
-			<img src="{$URL_IMAGE}/fojiao.jpg"/>
+			<img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/fojiao.jpg"/>
 		</div>
 		<div class="recommend-top-context">
 		  	<a href="#" style="text-decoration:none">佛教艺术之旅（2780）</a></br>
@@ -334,7 +382,8 @@
     <div class="cls_div" style="display:block;">
        <div class="content_mode">	
 		<div class="content_mode_img" style="text-align:center"> 
-		 <a href="http://blog.sosoing.com" target="_blank"><img src="{$URL_IMAGE}/533157962892.jpg" width="250" height="160" /></a>
+		 <a href="http://blog.sosoing.com" target="_blank"><img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/533157962892.jpg" width="250" height="160" /></a>
 			 </div>
 				<div class="content_mode_cont" >
 				 <div id="f15">位置隐蔽 不好找却好吃的餐馆
@@ -351,7 +400,8 @@
 			</div>                 
         <div class="content_mode"> 
 			<div class="content_mode_img" style="text-align:center">
-				<a href="http://blog.sosoing.com" target="_blank"><img src="{$URL_IMAGE}/533157962892.jpg" width="250" height="160" /></a>
+				<a href="http://blog.sosoing.com" target="_blank"><img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/533157962892.jpg" width="250" height="160" /></a>
 					</div>
 
 						<div class="content_mode_cont" id="f13" >
@@ -367,7 +417,8 @@
 				</div>
 			 <div class="content_mode"> 
 				<div class="content_mode_img" style="text-align:center">
-					<a href="http://blog.sosoing.com" target="_blank"><img src="{$URL_IMAGE}/533157962892.jpg" width="250" height="160" /></a>
+					<a href="http://blog.sosoing.com" target="_blank"><img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/533157962892.jpg" width="250" height="160" /></a>
 						</div>
 							<div class="content_mode_cont" id="f13">
 								<ul style="list-style-type:none">
@@ -382,7 +433,8 @@
 					  </div>
 			<div class="content_mode"> 
 				<div class="content_mode_img" style="text-align:center">
-					<a href="http://blog.sosoing.com" target="_blank"><img src="{$URL_IMAGE}/533157962892.jpg" width="250" height="160" /></a>
+					<a href="http://blog.sosoing.com" target="_blank"><img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/533157962892.jpg" width="250" height="160" /></a>
 						</div>
 							<div class="content_mode_cont" id="f13" >
 								<ul style="list-style-type:none">
@@ -397,7 +449,8 @@
 					</div>
 			<div class="content_mode"> 
 				<div class="content_mode_img" style="text-align:center">
-					<a href="http://blog.sosoing.com" target="_blank"><img src="{$URL_IMAGE}/533157962892.jpg" width="250" height="160" /></a>
+					<a href="http://blog.sosoing.com" target="_blank"><img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/533157962892.jpg" width="250" height="160" /></a>
 						</div>
 					<div class="content_mode_cont" id="f13" >
 						<ul style="list-style-type:none">
@@ -412,7 +465,8 @@
 				 </div>
 		<div class="content_mode"> 
 			<div class="content_mode_img" style="text-align:center">
-					<a href="http://blog.sosoing.com" target="_blank"><img src="{$URL_IMAGE}/533157962892.jpg" width="250" height="160" /></a>
+					<a href="http://blog.sosoing.com" target="_blank"><img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/533157962892.jpg" width="250" height="160" /></a>
 						</div>
 					 <div class="content_mode_cont" id="f13">
 							<ul style="list-style-type:none">
@@ -462,12 +516,15 @@
         <div class="content_mode"> 内容模块6</div>
         </div>
         </div>
-        <script language="JavaScript" src="{$URL_JS}/tab.js"></script>
+        <script language="JavaScript" src="<?php echo $_smarty_tpl->tpl_vars['URL_JS']->value;?>
+/tab.js"></script>
         </div>
 </div>
     <div class="footer">
-	  {include file="footer.html"}
+	  <?php echo $_smarty_tpl->getSubTemplate ("footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
 	</div>
 
 </body>
 </html>
+<?php }} ?>

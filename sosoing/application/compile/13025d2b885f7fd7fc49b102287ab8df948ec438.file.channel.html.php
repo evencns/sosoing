@@ -1,17 +1,49 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php /* Smarty version Smarty-3.1.7, created on 2012-06-26 06:07:33
+         compiled from "application/views\channel.html" */ ?>
+<?php /*%%SmartyHeaderCode:298364fe83ccba1af27-81731688%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '13025d2b885f7fd7fc49b102287ab8df948ec438' => 
+    array (
+      0 => 'application/views\\channel.html',
+      1 => 1340683652,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '298364fe83ccba1af27-81731688',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.7',
+  'unifunc' => 'content_4fe83ccbb9f9b',
+  'variables' => 
+  array (
+    'URL_CSS' => 0,
+    'URL_JS' => 0,
+    'URL_IMAGE' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_4fe83ccbb9f9b')) {function content_4fe83ccbb9f9b($_smarty_tpl) {?>﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>频道页</title>
-<link rel="stylesheet" type="text/css" href="{$URL_CSS}/header.css" />
-<link rel="stylesheet" type="text/css" href="{$URL_CSS}/channel.css" />
-<link rel="stylesheet" type="text/css" href="{$URL_CSS}/login.css" />
-<script language="JavaScript" src="{$URL_JS}/login.js" language="javascript" charset='utf-8' ></script>
+<link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['URL_CSS']->value;?>
+/header.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['URL_CSS']->value;?>
+/channel.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['URL_CSS']->value;?>
+/login.css" />
+<script language="JavaScript" src="<?php echo $_smarty_tpl->tpl_vars['URL_JS']->value;?>
+/login.js" language="javascript" charset='utf-8' ></script>
 
 </head>
 <body  >
 <div class="top">
-	<div class="logo"><img width="250px" height="80px" src="{$URL_IMAGE}/logo.gif"></div>
+	<div class="logo"><img width="250px" height="80px" src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/logo.gif"></div>
 			<div class="login">
 		<div class="loginList">账号 &nbsp;<input type="text"/>&nbsp;&nbsp;<input type="checkbox"/>&nbsp;&nbsp;自动登录</div>
 		<div class="loginList">密码 &nbsp;<input type="text"/>&nbsp;&nbsp;<input id ="login" class="loginButton" type="button" value="登录" /> &nbsp;&nbsp;<a href="#" style="text-decoration:none" onclick="alertWin('注册',550,310);" nfocus=this.blur()>注册</a></div>
@@ -24,14 +56,16 @@
                             <input type="text" name="q" title="Search" class="searchinput" id="searchinput" onkeydown="if (event.keyCode==13) {}" onblur="if(this.value=='')value='- 搜索你喜欢的 -';" onfocus="if(this.value=='-搜索你喜欢的 -')value='';" value="- 搜索你喜欢的 -" size="10"/>
                         </td>
                         <td>
-                            <input type="image" width="21" height="17" class="searchaction" onclick="if(document.forms['search'].searchinput.value=='- Search Products -')document.forms['search'].searchinput.value='';" alt="Search" src="{$URL_IMAGE}/magglass.gif" border="0" hspace="2"/>
+                            <input type="image" width="21" height="17" class="searchaction" onclick="if(document.forms['search'].searchinput.value=='- Search Products -')document.forms['search'].searchinput.value='';" alt="Search" src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/magglass.gif" border="0" hspace="2"/>
                         </td>
                     </tr>
                 </table>
             </form>
         </div>
         <div class="navigation">
-            <img  width="1200px" height="40px" src="{$URL_IMAGE}/navigation.gif">
+            <img  width="1200px" height="40px" src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/navigation.gif">
 
             <div id="" style=" position: absolute;left: 120px;top: 15px;font-size:14px;">
                 <a href="/" style="text-decoration:none;"> 首页</a>
@@ -58,7 +92,8 @@
 
 <div class="recommend_main">
 	<div class="recommend_left">
-		<div class="recommend_produ_img"><a href="/index.php/detail"><img width="90"  height="120" src="{$URL_IMAGE}/s6974202.jpg"  /></a></div>
+		<div class="recommend_produ_img"><a href="/index.php/detail"><img width="90"  height="120" src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/s6974202.jpg"  /></a></div>
 		<div class="recommend_produ_info">
 			<div class="recommend_produ_info_lie"><h2>史蒂夫·乔布斯传</h2></div>
 			<div class="recommend_produ_info_lie">作者：<a href="#" style="text-decoration:none">[美]沃尔特·艾沙克森</a> </div>
@@ -69,13 +104,17 @@
 			<div class="recommend_produ_info_lie">分享：</div>
 		</div>
 		<div class="recommend_produ_edge">
-			<div class="recommend_produ_edge_toll"><img src="{$URL_IMAGE}/qianbi.jpg" /></div>
+			<div class="recommend_produ_edge_toll"><img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/qianbi.jpg" /></div>
 			<div class="recommend_produ_edge_toll1"><a href="#" style="text-decoration:none;font-size:13px">在线阅读</a></div>
-			<div class="recommend_produ_edge_tol2"><img src="{$URL_IMAGE}/qianbi.jpg"/></div>
+			<div class="recommend_produ_edge_tol2"><img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/qianbi.jpg"/></div>
 			<div class="recommend_produ_edge_tol3"><a href="#" style="text-decoration:none;font-size:13px">立即下载</a></div>
-			<div class="recommend_produ_edge_tol4"><img src="{$URL_IMAGE}/yuan.jpg"/></div>
+			<div class="recommend_produ_edge_tol4"><img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/yuan.jpg"/></div>
 			<div class="recommend_produ_edge_tol5"><a href="#" style="text-decoration:none;font-size:13px">立即购买</a></div>
-			<div class="recommend_produ_edge_tol6"><img src="{$URL_IMAGE}/+.jpg"/></div>
+			<div class="recommend_produ_edge_tol6"><img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/+.jpg"/></div>
 			<div class="recommend_produ_edge_tol7"><a href="#" style="text-decoration:none;font-size:13px">收藏此书</a></div>
 			<div class="recommend_produ_edge_tol8"><a href="#" style="text-decoration:none">推荐</a></div>
 		</div>
@@ -113,7 +152,8 @@
 				<li><p><a href="#" style="text-decoration:none">（更多）</a></p></li>
 			</ul>
 		</div>
-		<img src="{$URL_IMAGE}/tiaowen.jpg" width="213px" height="1px"/>
+		<img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/tiaowen.jpg" width="213px" height="1px"/>
 		<div class="table_type">
 			<ul class="tables_about">
 				<li><p><a href="#" style="text-decoration:none">[流行]</a></p></li>
@@ -126,7 +166,8 @@
 				<li><p><a href="#" style="text-decoration:none">（更多）</a></p></li>
 			</ul>
 		</div>
-		<img src="{$URL_IMAGE}/tiaowen.jpg" width="213px" height="1px"/>
+		<img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/tiaowen.jpg" width="213px" height="1px"/>
 		<div class="table_type">
 			<ul class="tables_about">
 				<li><p><a href="#" style="text-decoration:none">[文化]</a></p></li>
@@ -139,7 +180,8 @@
 				<li><p><a href="#" style="text-decoration:none">(更多)</a></p></li>
 			</ul>
 		</div>
-		<img src="{$URL_IMAGE}/tiaowen.jpg" width="213px" height="1px"/>
+		<img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/tiaowen.jpg" width="213px" height="1px"/>
 		<div class="table_type">
 			<ul class="tables_about">
 				<li><p><a href="#" style="text-decoration:none">[生活]</a></p></li>
@@ -152,7 +194,8 @@
 				<li><p><a href="#" style="text-decoration:none">（更多）</a></p></li>
 			</ul>
 		</div>
-		<img src="{$URL_IMAGE}/tiaowen.jpg" width="213px" height="1px"/>
+		<img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/tiaowen.jpg" width="213px" height="1px"/>
 		<div class="table_type">
 			<ul class="tables_about">
 				<li><p><a href="#" style="text-decoration:none">[经营]</a></p></li>
@@ -165,7 +208,8 @@
 				<li><p><a href="#" style="text-decoration:none">（更多）</a></p></li>
 			</ul>
 		</div>
-		<img src="{$URL_IMAGE}/tiaowen.jpg" width="213px" height="1px"/>
+		<img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/tiaowen.jpg" width="213px" height="1px"/>
 		<div class="table_type">
 			<ul class="tables_about">
 				<li><p><a href="#" style="text-decoration:none">[科技]</a></p></li>
@@ -178,7 +222,8 @@
 				<li><p><a href="#" style="text-decoration:none">（更多）</a></p></li>
 			</ul>
 		</div>
-		<img src="{$URL_IMAGE}/tiaowen.jpg" width="213px" height="1px"/>
+		<img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/tiaowen.jpg" width="213px" height="1px"/>
 	</div>
 	
 </div>
@@ -188,19 +233,23 @@
 	
 	<ul class="piclist">
 		<li>
-			<img  src="{$URL_IMAGE}/s6584764.jpg"/> 
+			<img  src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/s6584764.jpg"/> 
 			<p><a href="http://www.test.com" style="text-decoration:none">浪潮之巅</a></p>
 		</li>
 		<li>
-			<img src="{$URL_IMAGE}/s4528546.jpg"/>
+			<img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/s4528546.jpg"/>
 			<p><a href="http://www.test.com" style="text-decoration:none">Facebook效应</a></p>
 		</li>
 		<li>
-			<img src="{$URL_IMAGE}/s4146437.jpg"/>
+			<img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/s4146437.jpg"/>
 			<p><a href="http://www.test.com" style="text-decoration:none">世界因你而改变</a></p>
 		</li>
 		<li>
-			<img src="{$URL_IMAGE}/s4146437.jpg"/>
+			<img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/s4146437.jpg"/>
 			<p><a href="http://www.test.com" style="text-decoration:none">民主的细节</a></p>
 		</li>
 		<li>
@@ -247,38 +296,45 @@
 </div>
  	<div class="user_message">
 		<div class="user_message_title">用户评论......（共##条）</div>
-		<div class="user_message_image"><img src="{$URL_IMAGE}/kehu.jpg" width="50px" height="50px" /></div>
+		<div class="user_message_image"><img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/kehu.jpg" width="50px" height="50px" /></div>
 		<div class="user_message_ss"><div class="user_message__context">我不是为了第一名而存在这个世界。</div></div>
 		<div class="user_message_name">刷屏达人夏娜军（我曾爱豆瓣想到就心酸）+用户等级</div>
 		<div class="user_message_context">佛山新政、芜湖新政――近5个月里，两宗涉嫌“救市”或“放松”的地方楼市新政先后被叫停，进一步显示出中央对楼市调控的决心。 
 		然而，就在芜湖新政被叫停次日，又有网友爆料称，浙江省宁波市象山县已悄然变通“限购令”。这一传言很快在网上传开，但象山县一直处于沉默之中。 
 		</div>
-		<div class="user_message_image"><img src="{$URL_IMAGE}/kehu.jpg" width="50px" height="50px" /></div>
+		<div class="user_message_image"><img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/kehu.jpg" width="50px" height="50px" /></div>
 		<div class="user_message_ss"><div class="user_message__context">我不是为了第一名而存在这个世界。</div></div>
 		<div class="user_message_name">刷屏达人夏娜军（我曾爱豆瓣想到就心酸）+用户等级</div>
 		<div class="user_message_context">佛山新政、芜湖新政――近5个月里，两宗涉嫌“救市”或“放松”的地方楼市新政先后被叫停，进一步显示出中央对楼市调控的决心。 
 		然而，就在芜湖新政被叫停次日，又有网友爆料称，浙江省宁波市象山县已悄然变通“限购令”。这一传言很快在网上传开，但象山县一直处于沉默之中。 
 		</div>
-		<div class="user_message_image"><img src="{$URL_IMAGE}/kehu.jpg" width="50px" height="50px" /></div>
+		<div class="user_message_image"><img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/kehu.jpg" width="50px" height="50px" /></div>
 		<div class="user_message_ss"><div class="user_message__context">我不是为了第一名而存在这个世界。</div></div>
 		<div class="user_message_name">刷屏达人夏娜军（我曾爱豆瓣想到就心酸）+用户等级</div>
 		<div class="user_message_context">佛山新政、芜湖新政――近5个月里，两宗涉嫌“救市”或“放松”的地方楼市新政先后被叫停，进一步显示出中央对楼市调控的决心。 
 		然而，就在芜湖新政被叫停次日，又有网友爆料称，浙江省宁波市象山县已悄然变通“限购令”。这一传言很快在网上传开，但象山县一直处于沉默之中。 
 		</div>
-		<div class="user_message_image"><img src="{$URL_IMAGE}/kehu.jpg" width="50px" height="50px" /></div>
+		<div class="user_message_image"><img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/kehu.jpg" width="50px" height="50px" /></div>
 		<div class="user_message_ss"><div class="user_message__context">我不是为了第一名而存在这个世界。</div></div>
 		<div class="user_message_name">刷屏达人夏娜军（我曾爱豆瓣想到就心酸）+用户等级</div>
 		<div class="user_message_context">佛山新政、芜湖新政――近5个月里，两宗涉嫌“救市”或“放松”的地方楼市新政先后被叫停，进一步显示出中央对楼市调控的决心。 
 		然而，就在芜湖新政被叫停次日，又有网友爆料称，浙江省宁波市象山县已悄然变通“限购令”。这一传言很快在网上传开，但象山县一直处于沉默之中。 
 		</div>
-		<div class="user_message_image"><img src="{$URL_IMAGE}/kehu.jpg" width="50px" height="50px" /></div>
+		<div class="user_message_image"><img src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+/kehu.jpg" width="50px" height="50px" /></div>
 		<div class="user_message_ss"><div class="user_message__context">我不是为了第一名而存在这个世界。</div></div>
 		<div class="user_message_name">刷屏达人夏娜军（我曾爱豆瓣想到就心酸）+用户等级</div>
 		<div class="user_message_context">佛山新政、芜湖新政――近5个月里，两宗涉嫌“救市”或“放松”的地方楼市新政先后被叫停，进一步显示出中央对楼市调控的决心。 
 			</div>
 	</div>
 	<div class="footer" style="margin-top:60px">
-		{include file="footer.html"}
+		<?php echo $_smarty_tpl->getSubTemplate ("footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
 	</div>
 </body>
 </html>
+<?php }} ?>
