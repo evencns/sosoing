@@ -1,64 +1,11 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>频道页</title>
-<link rel="stylesheet" type="text/css" href="{$URL_CSS}/header.css" />
-<link rel="stylesheet" type="text/css" href="{$URL_CSS}/channel.css" />
-<link rel="stylesheet" type="text/css" href="{$URL_CSS}/login.css" />
-<script language="JavaScript" src="{$URL_JS}/login.js" language="javascript" charset='utf-8' ></script>
 
-</head>
-<body  >
-<div class="top">
-	<div class="logo"><img width="250px" height="80px" src="{$URL_IMAGE}/logo.gif"></div>
-			<div class="login">
-		<div class="loginList">账号 &nbsp;<input type="text"/>&nbsp;&nbsp;<input type="checkbox"/>&nbsp;&nbsp;自动登录</div>
-		<div class="loginList">密码 &nbsp;<input type="text"/>&nbsp;&nbsp;<input id ="login" class="loginButton" type="button" value="登录" /> &nbsp;&nbsp;<a href="#" style="text-decoration:none" onclick="alertWin('注册',550,310);" nfocus=this.blur()>注册</a></div>
-	</div>
-		<div class="shoushou">
-            <form action="#" name="search">
-                <table border="0" cellpadding="0" cellspacing="0" class="tab_search">
-                    <tr>
-                        <td>
-                            <input type="text" name="q" title="Search" class="searchinput" id="searchinput" onkeydown="if (event.keyCode==13) {}" onblur="if(this.value=='')value='- 搜索你喜欢的 -';" onfocus="if(this.value=='-搜索你喜欢的 -')value='';" value="- 搜索你喜欢的 -" size="10"/>
-                        </td>
-                        <td>
-                            <input type="image" width="21" height="17" class="searchaction" onclick="if(document.forms['search'].searchinput.value=='- Search Products -')document.forms['search'].searchinput.value='';" alt="Search" src="{$URL_IMAGE}/magglass.gif" border="0" hspace="2"/>
-                        </td>
-                    </tr>
-                </table>
-            </form>
-        </div>
-        <div class="navigation">
-            <img  width="1200px" height="40px" src="{$URL_IMAGE}/navigation.gif">
-
-            <div id="" style=" position: absolute;left: 120px;top: 15px;font-size:14px;">
-                <a href="/" style="text-decoration:none;"> 首页</a>
-            </div>
-
-            <div id="" style=" position: absolute;left: 205px;top: 15px;font-size:14px;">
-                <a href="#" style="text-decoration:none; ">电子产品</a>
-            </div>
-
-            <div id="" style=" position: absolute;left: 320px;top: 15px;font-size:14px;">
-                <a href="#" style="text-decoration:none; ">化妆品</a>
-            </div>
-
-            <div id="" style=" position: absolute;left: 415px;top: 15px;font-size:14px;">
-                <a href="/index.php/channel" style="text-decoration:none; ">图书</a>
-            </div>
-
-            <div id="" style="position: absolute;left: 500px;top: 15px;font-size:14px;">
-                <a href="#" style="text-decoration:none; ">美食</a>
-            </div>
-        </div>
-    </div>
-</div>
+	{include file="header.html"}
 
 <div class="recommend_main">
 	<div class="recommend_left">
-		<div class="recommend_produ_img"><a href="/index.php/detail"><img width="90"  height="120" src="{$URL_IMAGE}/s6974202.jpg"  /></a></div>
+		<div class="recommend_produ_img"><a href="/index.php/channel/detail"><img width="90"  height="120" src="{$URL_IMAGE}/s6974202.jpg"  /></a></div>
 		<div class="recommend_produ_info">
 			<div class="recommend_produ_info_lie"><h2>史蒂夫·乔布斯传</h2></div>
 			<div class="recommend_produ_info_lie">作者：<a href="#" style="text-decoration:none">[美]沃尔特·艾沙克森</a> </div>

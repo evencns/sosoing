@@ -2,7 +2,10 @@
 
 class Channel extends My_Controller
 {
-	
+	public function _init()
+    {
+        $this->load->database();
+    }
 
     function index()
     {

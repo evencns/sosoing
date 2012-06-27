@@ -56,7 +56,7 @@
             <img  width="1200px" height="40px" src="{$URL_IMAGE}/navigation.gif">
 
             <div style=" position: absolute;left: 120px;top: 15px;font-size:14px; color: #666666">
-                <a href="#" style="text-decoration:none;"> 首页</a>
+                <a href="index.php" style="text-decoration:none;"> 首页</a>
             </div>
 
             <div style=" position: absolute;left: 205px;top: 15px;font-size:14px;color: #666666">

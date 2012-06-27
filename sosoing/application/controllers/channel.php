@@ -12,6 +12,11 @@ class Channel extends My_Controller
         
 		$this->tpl->display('channel.html');
     }
+
+	function detail(){
+	
+		$this->tpl->display('detail.html');
+	}
 }
 
 

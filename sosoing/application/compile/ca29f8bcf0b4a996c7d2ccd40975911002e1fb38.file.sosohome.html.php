@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.7, created on 2012-06-26 05:32:58
+<?php /* Smarty version Smarty-3.1.7, created on 2012-06-26 11:11:42
          compiled from "application/views\sosohome.html" */ ?>
 <?php /*%%SmartyHeaderCode:283894fda9132aa42b1-86314899%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ca29f8bcf0b4a996c7d2ccd40975911002e1fb38' => 
     array (
       0 => 'application/views\\sosohome.html',
-      1 => 1340681549,
+      1 => 1340701895,
       2 => 'file',
     ),
   ),
@@ -19,103 +19,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_4fda9133510ef',
   'variables' => 
   array (
-    'URL_CSS' => 0,
-    'URL_JS' => 0,
     'URL_IMAGE' => 0,
-    'user' => 0,
+    'URL_JS' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_4fda9133510ef')) {function content_4fda9133510ef($_smarty_tpl) {?>﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>搜搜赢首页</title>
-<link rel="stylesheet" type="text/css"  href="<?php echo $_smarty_tpl->tpl_vars['URL_CSS']->value;?>
-/header.css" />
-<link rel="stylesheet" type="text/css"  href="<?php echo $_smarty_tpl->tpl_vars['URL_CSS']->value;?>
-/soso.css"   />
-<link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['URL_CSS']->value;?>
-/footer.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['URL_CSS']->value;?>
-/login.css" />
-<script src="<?php echo $_smarty_tpl->tpl_vars['URL_JS']->value;?>
-/jquery.js"></script>
-<script src="<?php echo $_smarty_tpl->tpl_vars['URL_JS']->value;?>
-/login.js"></script>
-</head>
-<body background="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
-/bg.gif" >
-<div class="top">
-    <div class="logo">
-        <a href="/" alt="搜搜赢", title="搜搜赢">
-            <img width="250px" height="80px" src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
-/logo.gif"> 
-        </a>
-    </div>
-        <div class="login" id="login_div">
-            <?php if (!$_smarty_tpl->tpl_vars['user']->value['username']){?>
-                <form id="login_form"  method="post" action="index.php/login/dologin"  />
-                <div class="loginList">账号 &nbsp;<input type="text" name="username" >&nbsp;&nbsp;
-				<input type="checkbox"/>&nbsp;&nbsp;自动登录</div>
-                <div class="loginList">密码 &nbsp;<input type="password" name="password" >&nbsp;&nbsp;
-				<input id ="login" class="loginButton" type="submit" value="登录" />&nbsp;&nbsp;<a href="#" style="text-decoration:none" onclick="alertWin('注册',550,310);" onfocus="this.blur()">注册</a></div>
-                </form>
-            <?php }else{ ?>
-                <script>
-                    var html  = "尊敬的用户";
-                        html += "<b style='color: orange; cursor: pointer' onclick='gotoHome()'>";
-                        html += "<?php echo $_smarty_tpl->tpl_vars['user']->value['username'];?>
-";
-                        html += "</b>";
-                        html += Util.getHours();
-                        html += "好！|";
-                        html += "<b style='cursor: pointer' onclick='logout()'>退出</b>";
-                    $("#login_div").html(html);
-                </script>
-            <?php }?>
-        </div>
-        <div class="shoushou">
-            <form action="#" name="search">
-                <table border="0" cellpadding="0" cellspacing="0" class="tab_search">
-                    <tr>
-                        <td>
-                            <input type="text" name="q" title="Search" class="searchinput" id="searchinput" onkeydown="if (event.keyCode==13) {}" onblur="if(this.value=='')value='- 搜索你喜欢的 -';" onfocus="if(this.value=='-搜索你喜欢的 -')value='';" value="- 搜索你喜欢的 -" size="10"/>
-                            </td>
-                        <td>
-                            <input type="image" width="21" height="17" class="searchaction" onclick="if(document.forms['search'].searchinput.value=='- Search Products -')document.forms['search'].searchinput.value='';" alt="Search" src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
-/magglass.gif" border="0" hspace="2"/>
-                        </td>
-                    </tr>
-                </table>
-            </form>
-        </div>
-        <div class="navigation">
-            <img  width="1200px" height="40px" src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
-/navigation.gif">
+ 
+<?php echo $_smarty_tpl->getSubTemplate ("header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
-            <div style=" position: absolute;left: 120px;top: 15px;font-size:14px; color: #666666">
-                <a href="index.php" style="text-decoration:none;"> 首页</a>
-            </div>
-
-            <div style=" position: absolute;left: 205px;top: 15px;font-size:14px;color: #666666">
-                <a href="#" style="text-decoration:none; ">电子产品</a>
-            </div>
-
-            <div style=" position: absolute;left: 320px;top: 15px;font-size:14px;color: #666666">
-                <a href="#" style="text-decoration:none; ">化妆品</a>
-            </div>
-
-            <div style=" position: absolute;left: 415px;top: 15px;font-size:14px;color: #666666">
-                <a href="/index.php/channel" style="text-decoration:none; ">图书</a>
-            </div>
-
-            <div style=" position: absolute;left: 500px;top: 15px;font-size:14px;color: #666666">
-                <a href="#" style="text-decoration:none; ">美食</a>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="leftcolumn"> 
     <div class="relation-produ" >

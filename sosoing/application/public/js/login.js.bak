@@ -246,7 +246,7 @@ function addSubmitEvent()
                 return false;
             }
 
-            $.post("index.php/user/register", {"username": username, "password": password}, function(json) {
+            $.post("index.php/login/dologin", {"username": username, "password": password}, function(json) {
                 var data = json.jsonToArray();
                 if (data.status) {
                     alert(data.msg);
@@ -277,7 +277,7 @@ function logout()
     /** 重新获取jquery对象 */
     var $ = jQuery.noConflict();
 
-    $.get("index.php/login/logout", null, function(json) {
+    $.get("login/logout", null, function(json) {
         var data = json.jsonToArray();
         if (data.status) {
             alert(data.msg);

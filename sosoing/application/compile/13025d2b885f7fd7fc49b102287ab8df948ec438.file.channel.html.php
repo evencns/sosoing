@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.7, created on 2012-06-26 06:07:33
+<?php /* Smarty version Smarty-3.1.7, created on 2012-06-27 04:45:19
          compiled from "application/views\channel.html" */ ?>
 <?php /*%%SmartyHeaderCode:298364fe83ccba1af27-81731688%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '13025d2b885f7fd7fc49b102287ab8df948ec438' => 
     array (
       0 => 'application/views\\channel.html',
-      1 => 1340683652,
+      1 => 1340764847,
       2 => 'file',
     ),
   ),
@@ -19,80 +19,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_4fe83ccbb9f9b',
   'variables' => 
   array (
-    'URL_CSS' => 0,
-    'URL_JS' => 0,
     'URL_IMAGE' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_4fe83ccbb9f9b')) {function content_4fe83ccbb9f9b($_smarty_tpl) {?>﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>频道页</title>
-<link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['URL_CSS']->value;?>
-/header.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['URL_CSS']->value;?>
-/channel.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['URL_CSS']->value;?>
-/login.css" />
-<script language="JavaScript" src="<?php echo $_smarty_tpl->tpl_vars['URL_JS']->value;?>
-/login.js" language="javascript" charset='utf-8' ></script>
 
-</head>
-<body  >
-<div class="top">
-	<div class="logo"><img width="250px" height="80px" src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
-/logo.gif"></div>
-			<div class="login">
-		<div class="loginList">账号 &nbsp;<input type="text"/>&nbsp;&nbsp;<input type="checkbox"/>&nbsp;&nbsp;自动登录</div>
-		<div class="loginList">密码 &nbsp;<input type="text"/>&nbsp;&nbsp;<input id ="login" class="loginButton" type="button" value="登录" /> &nbsp;&nbsp;<a href="#" style="text-decoration:none" onclick="alertWin('注册',550,310);" nfocus=this.blur()>注册</a></div>
-	</div>
-		<div class="shoushou">
-            <form action="#" name="search">
-                <table border="0" cellpadding="0" cellspacing="0" class="tab_search">
-                    <tr>
-                        <td>
-                            <input type="text" name="q" title="Search" class="searchinput" id="searchinput" onkeydown="if (event.keyCode==13) {}" onblur="if(this.value=='')value='- 搜索你喜欢的 -';" onfocus="if(this.value=='-搜索你喜欢的 -')value='';" value="- 搜索你喜欢的 -" size="10"/>
-                        </td>
-                        <td>
-                            <input type="image" width="21" height="17" class="searchaction" onclick="if(document.forms['search'].searchinput.value=='- Search Products -')document.forms['search'].searchinput.value='';" alt="Search" src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
-/magglass.gif" border="0" hspace="2"/>
-                        </td>
-                    </tr>
-                </table>
-            </form>
-        </div>
-        <div class="navigation">
-            <img  width="1200px" height="40px" src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
-/navigation.gif">
+	<?php echo $_smarty_tpl->getSubTemplate ("header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
-            <div id="" style=" position: absolute;left: 120px;top: 15px;font-size:14px;">
-                <a href="/" style="text-decoration:none;"> 首页</a>
-            </div>
-
-            <div id="" style=" position: absolute;left: 205px;top: 15px;font-size:14px;">
-                <a href="#" style="text-decoration:none; ">电子产品</a>
-            </div>
-
-            <div id="" style=" position: absolute;left: 320px;top: 15px;font-size:14px;">
-                <a href="#" style="text-decoration:none; ">化妆品</a>
-            </div>
-
-            <div id="" style=" position: absolute;left: 415px;top: 15px;font-size:14px;">
-                <a href="/index.php/channel" style="text-decoration:none; ">图书</a>
-            </div>
-
-            <div id="" style="position: absolute;left: 500px;top: 15px;font-size:14px;">
-                <a href="#" style="text-decoration:none; ">美食</a>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="recommend_main">
 	<div class="recommend_left">
-		<div class="recommend_produ_img"><a href="/index.php/detail"><img width="90"  height="120" src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
+		<div class="recommend_produ_img"><a href="/index.php/channel/detail"><img width="90"  height="120" src="<?php echo $_smarty_tpl->tpl_vars['URL_IMAGE']->value;?>
 /s6974202.jpg"  /></a></div>
 		<div class="recommend_produ_info">
 			<div class="recommend_produ_info_lie"><h2>史蒂夫·乔布斯传</h2></div>
