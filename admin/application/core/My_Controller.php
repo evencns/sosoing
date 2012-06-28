@@ -181,42 +181,87 @@ class My_Controller extends CI_Controller
     }
 }
 
-class Params extends CI_Controller
+
+class Params
 {
-    protected $_params = null;
+    public $_params         = null;
+    public $_get_vars       = array();
+    public $_post_vars      = array();
+    public $_request_vars   = array();
 
     public function __construct()
     {
-        parent::__construct();
-        
-        // 参数
-        $params_count = $this->uri->total_rsegments() - 2;
-        if ($params_count > 0) {
-            $params = array_slice($this->uri->rsegment_array(), 2);
+        $this->_init_get();
+        $this->_init_post();
+        $this->_init_request();
+    }
 
-            for ($i = 0; $i < $params_count; $i += 2) {
-                $this->_params[$params[$i]] = $params[$i + 1];
-            }
+    /**
+     * $_GET
+     */
+    public function get($var = null, $default = null)
+    {
+        if ($var) {
+            return isset($this->_get_vars[$var]) ? $this->_get_vars[$var] : $default;
+        } else {
+            return $this->_get_vars;
         }
     }
 
-    public function getInt($var, $default = 0)
+    /**
+     * $_POST
+     */
+    public function post($var = null, $default = null)
     {
-        return isset($this->_params[$var]) ? intval($this->_params[$var]) : $default;
+        if ($var) {
+            return isset($this->_post_vars[$var]) ? $this->_post_vars[$var] : $default;
+        } else {
+            return $this->_post_vars;
+        }
     }
 
-    public function getString($var, $default = '')
+    /**
+     * $_REQUEST
+     */
+    public function request($var = null, $default = null)
     {
-        return isset($this->_params[$var]) ? trim($this->_params[$var]) : $default;
+        if ($var) {
+            return isset($this->_request_vars[$var]) ? $this->_request_vars[$var] : $default;
+        } else {
+            return $this->_request_vars;
+        }
     }
 
-    public function postInt($var, $default = 0)
+    private function _init_get()
     {
-        ;
+        if ($_SERVER['REQUEST_URI']) {
+            $list = array_slice(explode('/', $_SERVER['REQUEST_URI']), 4);
+            $counter = 0;
+            $var = null;
+            foreach ($list as $val) {
+                if ($counter % 2) {
+                    $this->_get_vars[$var] = $val;
+                } else {
+                    $var = $val;
+                }
+                ++$counter;
+            }
+        } else {
+            $this->_get_vars = array();
+        }
     }
 
-    public function postString($var, $default = '')
+    private function _init_post()
     {
-        ;
+        if ($_POST) {
+            $this->_post_vars = $_POST;
+        } else {
+            $this->_post_vars = array();
+        }
+    }
+
+    private function _init_request()
+    {
+        $this->_request_vars = $this->_post_vars + $this->_get_vars;
     }
 }
